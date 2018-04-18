@@ -4,10 +4,15 @@
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
+  padding-top: 0px;
 }
 
-
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
 /*
  * Global add-ons
  */
@@ -36,12 +41,12 @@ body {
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
-    top: 51px;
+    top: 72px;
     bottom: 0;
     left: 0;
     z-index: 1000;
     display: block;
-    padding: 20px;
+    padding: 10px 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: #f5f5f5;
@@ -72,7 +77,7 @@ body {
  */
 
 .main {
-  padding: 20px;
+  padding: 15px;
 }
 @media (min-width: 768px) {
   .main {
@@ -102,4 +107,70 @@ body {
 .placeholder img {
   display: inline-block;
   border-radius: 50%;
+}
+
+.navbar {
+  min-height: 60px;
+  margin-bottom: 0px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #444;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover{
+  color: #6f6f6f;
+}
+
+.navbar-brand {
+  float: left;
+  height: 70px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.navbar-nav>li>a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 50px;
+  font-size: 16px;
+}
+
+.nav-collapse-sidebar>li>a {
+  padding: 10px 40px;
+}
+
+.table>thead>tr>th {
+  vertical-align: bottom;
+  border-bottom: 0;
+  font-weight:normal;
+}
+
+.navbar-inverse {
+  background-color: #f7f7f7;
+  border-color: #e2e2e2;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  color: #444;
+  background-color: #ccc;
+}
+
+.right-sidebar {
+  right: 0;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+  border-left: 1px solid #eee;
+}
+
+.right-sidebar .panel-header {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.list-unstyled li {
+  padding-bottom: 5px;
 }

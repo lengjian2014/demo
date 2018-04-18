@@ -1,142 +1,124 @@
 <!DOCTYPE html>
-<!-- saved from url=(0042)https://v3.bootcss.com/examples/dashboard/ -->
-<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+  <title>学生管理</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/dashboard.css" rel="stylesheet">
+</head>
 
-    <title>Dashboard Template for Bootstrap</title>
+<body>
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#">教师资源</a></li>
+        <li><a href="#">学生资源</a></li>
+        <li><a href="#">课程管理</a></li>
+        <li><a href="#">教师管理</a></li>
+        <li class="active"><a href="#">学生管理</a></li>
+        <li><a href="#">资源库</a></li>
+        <li><a href="#">作业管理</a></li>
+        <li><a href="#">发布作业</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="./css/dashboard.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="https://v3.bootcss.com/examples/dashboard/#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://v3.bootcss.com/examples/dashboard/#">Dashboard</a></li>
-            <li><a href="https://v3.bootcss.com/examples/dashboard/#">Settings</a></li>
-            <li><a href="https://v3.bootcss.com/examples/dashboard/#">Profile</a></li>
-            <li><a href="https://v3.bootcss.com/examples/dashboard/#">Help</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
+<div class="container-fluid" id="list">
+  <div class="row">
+    <div class="col-md-10 main">
+      <div class="panel" style="border:0px;">
+        <div class="page-header">
+          <div class="btn-group">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addStuModal"> 新增</button>
+          </div><!-- /btn-group -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger" v-on:click="remove"> 删除</button>
+          </div><!-- /btn-group -->
         </div>
       </div>
-    </nav>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th><input type="checkbox"> 编号</th>
-                  <th>姓名</th>
-                  <th>学号</th>
-                  <th>学院</th>
-                  <th>专业</th>
-                  <th>班级</th>
-                  <th>课程</th>
-                  <th>操作</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox"> 1,001</td>
-                  <td>文卓</td>
-                  <td>20130305</td>
-                  <td>环境工程</td>
-                  <td>工程</td>
-                  <td>01班</td>
-                  <td>动画制作</td>
-                  <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"> 1,002</td>
-                  <td>石兰</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                  <td>01班</td>
-                  <td>动画制作</td>
-                  <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"> 1,003</td>
-                  <td>谭毅</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                  <td>01班</td>
-                  <td>动画制作</td>
-                  <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"> 1,003</td>
-                  <td>李剑</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                  <td>01班</td>
-                  <td>动画制作</td>
-                  <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"> 1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                  <td>01班</td>
-                  <td>动画制作</td>
-                  <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+      <div class="table-responsive">
+        <student-list></student-list>
       </div>
     </div>
+  </div>
+</div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./Dashboard Template for Bootstrap_files/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="./Dashboard Template for Bootstrap_files/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="./Dashboard Template for Bootstrap_files/holder.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./Dashboard Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
-  
+<!--新增学生信息面板-->
+<div class="modal fade" id="addStuModal" tabindex="-1" role="dialog" aria-labelledby="">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">新增学生信息</h4>
+      </div>
+      <div class="modal-body">
+        <form id="addStuForm">
+          <div class="form-group">
+            <label for="id" class="control-label">编号:</label>
+            <input type="text" class="form-control" id="id" name="id">
+          </div>
+          <div class="form-group">
+            <label for="name" class="control-label">姓名:</label>
+            <input type="text" class="form-control" id="name" name="name" />
+          </div>
+          <div class="form-group">
+            <label for="name" class="control-label">学号:</label>
+            <input type="text" class="form-control" id="num" name="num" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/stuManage.js"></script>
+<!--学生信息模板-->
+<script type="text/x-template" id="studentListTemp">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th></th>
+      <th>编号</th>
+      <th>姓名</th>
+      <th>学号</th>
+      <th>学院</th>
+      <th>专业</th>
+      <th>班级</th>
+      <th>课程</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr v-for="(student, index) in students">
+      <td><input type="checkbox"> </td>
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.num }}</td>
+      <td>{{ student.academy }}</td>
+      <td>{{ student.major }}</td>
+      <td>{{ student.class }}</td>
+      <td>{{ student.course }}</td>
+    </tr>
+    </tbody>
+  </table>
+</script>
 
-</body></html>
+</body>
+</html>

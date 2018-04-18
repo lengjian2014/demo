@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+  <title>Dashboard Template for Bootstrap</title>
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#">教师资源</a></li>
+        <li class="active"><a href="#">学生资源</a></li>
+        <li><a href="#">课程管理</a></li>
+        <li><a href="#">教师管理</a></li>
+        <li><a href="#">学生管理</a></li>
+        <li><a href="#">资源库</a></li>
+        <li><a href="#">作业管理</a></li>
+        <li><a href="#">发布作业</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+        <li class="active"><a href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> 全部文件</a></li>
+        <li><a href=""><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span> 素材</a></li>
+        <li><a href=""><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span> 视频</a></li>
+        <li><a href=""><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span> 文档</a></li>
+      </ul>
+    </div>
+    <div class="col-md-10 col-md-offset-2 main">
+
+      <div class="panel" style="border:0px;">
+        <div class="page-header">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-upload"></span> 上传</button>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download"></span> 下载</button>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-zoom-in"></span> 预览 </button>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span> 删除 </button>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-level-up"></span> 移动 </button>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-level-up"></span> 新建文件夹</button>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-save"></span> 导入课程</button>
+            </div><!-- /btn-group -->
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th><input type="checkbox"> 文件名</th>
+            <th></th>
+            <th>类型</th>
+            <th>大小</th>
+            <th>修改时间</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><input type="checkbox"> <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span> 液压传动与气压传动</td>
+            <td><span class="glyphicon glyphicon-download"></span>　<span class="glyphicon glyphicon-level-up"></span>　<span class="glyphicon glyphicon-trash"></span></td>
+            <td>ipsum</td>
+            <td>dolor</td>
+            <td>sit</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox">  </td>
+            <td><span class="glyphicon glyphicon-download"></span>　<span class="glyphicon glyphicon-level-up"></span>　<span class="glyphicon glyphicon-trash"></span></td>
+            <td>consectetur</td>
+            <td>adipiscing</td>
+            <td>elit</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox">  </td>
+            <td><span class="glyphicon glyphicon-download"></span>　<span class="glyphicon glyphicon-level-up"></span>　<span class="glyphicon glyphicon-trash"></span></td>
+            <td>nec</td>
+            <td>odio</td>
+            <td>Praesent</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox">  </td>
+            <td><span class="glyphicon glyphicon-download"></span>　<span class="glyphicon glyphicon-level-up"></span>　<span class="glyphicon glyphicon-trash"></span></td>
+            <td>Sed</td>
+            <td>cursus</td>
+            <td>ante</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox">  </td>
+            <td><span class="glyphicon glyphicon-download"></span>　<span class="glyphicon glyphicon-level-up"></span>　<span class="glyphicon glyphicon-trash"></span></td>
+            <td>diam</td>
+            <td>Sed</td>
+            <td>nisi</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox">  </td>
+            <td><span class="glyphicon glyphicon-download"></span>　<span class="glyphicon glyphicon-level-up"></span>　<span class="glyphicon glyphicon-trash"></span></td>
+            <td>quis</td>
+            <td>sem</td>
+            <td>at</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../../assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

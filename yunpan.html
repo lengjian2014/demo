@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<!-- 公用样式 -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/public_201601.css"/>
+<!-- /公用样式 -->
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="../node_modules/webuploader/dist/webuploader.css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="pc_ssq_jny">
+<div class="subnavbar">
+    <div class="subnavbar-inner">
+        <div class="container">
+            <ul class="mainnav">
+                <li class="active"><a href="index.html"><i class="icon-dashboard"></i><span>教师资源</span> </a> </li>
+                <li><a href="reports.html"><i class="icon-list-alt"></i><span>学生资源</span> </a> </li>
+                <li><a href="guidely.html"><i class="icon-facetime-video"></i><span>课程管理</span> </a></li>
+                <li><a href="charts.html"><i class="icon-bar-chart"></i><span>教师管理</span> </a> </li>
+                <li><a href="shortcodes.html"><i class="icon-code"></i><span>学生管理</span> </a> </li>
+                <li><a href="shortcodes.html"><i class="icon-code"></i><span>资源库</span> </a> </li>
+                <li><a href="shortcodes.html"><i class="icon-code"></i><span>作业管理</span> </a> </li>
+                <li><a href="shortcodes.html"><i class="icon-code"></i><span>发布作业</span> </a> </li>
+            </ul>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /subnavbar-inner -->
+</div>
+<div class="DZ_main clearfix">
+    <div class="leftMenu">
+        <ul class="menuA">
+            <li class="cur"><a href="#" >我的资源</a></li>
+            <li><a href="#">最近上传</a></li>
+        </ul>
+    </div>
+    <div class="rightCon">
+        <div class="conList" style="display:block;">
+            <div class="titBox">
+                <input  type="button" value="新建文件夹" class="btn2" onclick="$('#createdir').toggle();">
+                <input  type="button" value="删除" class="btn3 dbtn3" id="delete">
+                <input  type="button" value="移动到" class="btn4 dbtn4" id="moveto">
+                <span class="lastBtn" id="uploading-small" style="display:none;">
+                    <input name="" type="button" class="last">
+                    <em class="ico"></em>
+                </span>
+            </div>
+            <div class="conBox">
+                <div class="tit">全部文件</div>
+                <ul class="conText" id="fileList">
+                    <li class="new" style="display:none;" id="createdir">
+                        <p><img src="images/ext/8.png"></p>
+                        <p><input type="text" id="newdir"  class="newtxt">
+                        </p>
+                    </li>
+                    <li class="cur">
+                        <p><input name="" type="checkbox" value="" class="check"></p>
+                        <p><img src="images/user_jny.png"></p>
+                        <p class=""><input name="" type="text" value="高一期末考试冲刺习题立体几何部分体几何..." class="txt" readonly></p>
+                        <p class="sBtn">
+                            
+                            <span class="s4"></span>
+                            <span class="s1 action-delete"></span>
+                            <span class="s2 action-moveto"></span>
+                            <span class="s3 action-edit"></span>
+                        </p>
+                        <p class="time">2016-12-06  14:45</p>
+                    </li>
+                    <li>
+                        <p><input name="" type="checkbox" value="" class="check"></p>
+                        <p><img src="images/user_jny.png"></p>
+                        <p class="txt"><input name="" type="text" value="高一期末考试冲刺习题立体几何部分体几何..." class="txt" readonly></p>
+                        <p class="sBtn">
+                            <span class="s4"></span>
+                            <span class="s1 action-delete"></span>
+                            <span class="s2 action-moveto"></span>
+                            <span class="s3 action-edit"></span>
+                        </p>
+                        <p class="time">2016-12-06  14:45</p>
+                    </li>
+                    <li>
+                        <p><input name="" type="checkbox" value="" class="check"></p>
+                        <p><img src="images/user_jny.png"></p>
+                        <p class="txt"><input name="" type="text" value="高一期末考试冲刺习题立体几何部分体几何..." class="txt" readonly></p>
+                        <p class="sBtn">
+                            <span class="s4"></span>
+                            <span class="s1 action-delete"></span>
+                            <span class="s2 action-moveto"></span>
+                            <span class="s3 action-edit"></span>
+                        </p>
+                        <p class="time">2016-12-06  14:45</p>
+                    </li>
+                    <li>
+                        <p><input name="" type="checkbox" value="" class="check"></p>
+                        <p><img src="images/user_jny.png"></p>
+                        <p class="txt"><input name="" type="text" value="高一期末考试冲刺习题立体几何部分体几何..." class="txt" readonly></p>
+                        <p class="sBtn">
+                            <span class="s4"></span>
+                            <span class="s1 action-delete"></span>
+                            <span class="s2 action-moveto"></span>
+                            <span class="s3 action-edit"></span>
+                        </p>
+                        <p class="time">2016-12-06  14:45</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<!--正在上传弹窗-->
+<div class="layer_content show2 showBox" style="display:none" id="uploading">
+    <div class="layer_hd">
+        <div class="title">正在上传<span id="cur-total">(0/0)</span></div>
+        <span class="layer_small"></span>
+        <a href="javascript:;" class="layer_close"></a>
+    </div>
+    <div class="layer_bd" style="width:630px;">
+        <div class="conBox">
+            <div class="conText">
+                <ul class="update">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--正在上传弹窗-->
+<!--取消上传弹窗-->
+<div class="delBox showBox" style="display: none" id="cancel-all-upload">
+    <div class="dTit">取消上传</div>
+    <div class="dCon">
+        <div class="dtext">确定取消所有正在上传中的任务？</div>
+        <p><input name="" type="button" class="btn btnB" value="取消"><input name="" type="button" class="btn  btnA" value="确定"></p>
+    </div>
+</div>
+<!--取消上传弹窗-->
+<!--移动弹窗-->
+<div class="layer_content showBox show1" style="width:510px;display:none" id="moving">
+    <div class="layer_hd">
+        <div class="title">移动到</span></div>
+        <a href="javascript:;" class="layer_close"></a>
+    </div>
+    <div class="layer_bd" style="width:510px;">
+        <div class="conBox">
+            <div class="conText">
+                <div class="rmBox">
+                    <div class="P_treeBox" id="P_treeBox">
+
+                    </div>
+                </div>
+                <div class="rCon">
+                    <p><input name="" type="button" class="btn btnB cancel-move" value="取消"><input name="" type="button" class="btn btnA  submit-move" value="确定"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="pid" value="" id="moveto-floder-id">
+    <input type="hidden" name="fid" value="" id="move-file-id">
+</div>
+<!--移动弹窗结束-->
+<!--删除弹出框-->
+<div class="delBox showBox" style="display:none" id="deleteing">
+    <div class="dTit">删除文件</div>
+    <div class="dCon">
+        <div class="dtext">确定要删除这个文件？</div>
+        <p><input name="" type="button" class="btn  btnB" value="取消"><input name="" type="button" class="btn btnA" value="确定"></p>
+    </div>
+    <input type="hidden" id="delete-file-id" name="fids" value="">
+</div>
+
+<script type="text/javascript" src="js/index.js"></script>
+
+</body>
+</html>
