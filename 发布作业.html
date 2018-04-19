@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+  <title>发布作业</title>
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#">教师资源</a></li>
+        <li><a href="#">学生资源</a></li>
+        <li><a href="#">课程管理</a></li>
+        <li><a href="#">教师管理</a></li>
+        <li><a href="#">学生管理</a></li>
+        <li><a href="#">资源库</a></li>
+        <li><a href="#">作业管理</a></li>
+        <li class="active"><a href="#">发布作业</a></li>
+        <li><a href="#">作业提交</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+    <div class="panel panel-default" style="border:0;">
+      <div class="panel-heading">课程</div>
+      <div class="panel-body">
+        <div class="row" style="margin-bottom:15px;">
+          <button class="active btn btn-default btn-lg col-sm-offset-1">三维动画设计</button>
+          <button class="btn btn-default btn-lg col-sm-offset-1">Photoshop</button>
+          <button class="btn btn-default btn-lg col-sm-offset-1">游戏设计</button>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="panel panel-default" style="border:0;">
+              <div class="panel-heading">课程目录</div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-12" style="overflow:scroll;">
+                    <div class="list-group">
+                      <a class="list-group-item">第1课时 课程简介及相关软件</a>
+                      <a class="list-group-item">第2课时 设计艺术史</a>
+                      <a class="list-group-item">第3课时 软件界面1</a>
+                      <a class="list-group-item">第4课时 软件界面2</a>
+                      <a class="list-group-item">第5课时 工具使用</a>
+                      <a class="list-group-item">第6课时 例子</a>
+                      <a class="list-group-item active">第7课时 例子</a>
+                      <a class="list-group-item">第8课时 例子</a>
+                      <a class="list-group-item">第9课时 例子</a>
+                      <a class="list-group-item">第10课时 例子</a>
+                      <a class="list-group-item">第11课时 例子</a>
+                      <a class="list-group-item">第12课时 例子</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="panel panel-default" style="border:0;">
+              <div class="panel-heading">发布作业</div>
+              <div class="panel-body">
+                  <div class="row">
+                    <div class="col-sm-8">
+                        <form class="form-horizontal">
+                          <div class="form-group" style="margin-bottom:15px;">
+                              <div class="col-sm-6">
+                                  <label class="control-label" for="name">作业题目</label>
+                                  <input type="text" class="form-control" id="name" placeholder="请输入作业题目" />
+                              </div>
+                          </div>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                  <label class="control-label" for="desc">作业描述</label>
+                                  <textarea id="desc" class="form-control" rows="5"></textarea>
+                              </div>
+                            </div>
+                          <div class="form-group">
+                            <div class="col-sm-6">
+                                <label class="control-label" for="end_time">截止时间</label>
+                                <input type="datetime" class="form-control" id="end_time" />
+                            </div>
+                          </div>
+                            <div class="form-group">
+                                <div class="col-md-5">
+                                  <label class="control-label">上传文件</label>
+                                  <a href="#" class="thumbnail">
+                                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTYyZGJlZTAyZTIgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNjJkYmVlMDJlMiI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI1OS41NTQ2ODc1IiB5PSI5NC41Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="100x180">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="col-sm-4">
+                                <button class="btn btn-success">确认提交</button>
+                              </div>
+                            </div>
+                        </form>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

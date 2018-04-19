@@ -8,9 +8,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="../../favicon.ico">
-  <title>虚拟现实教学辅助云平台</title>
+  <title>学生管理</title>
+  <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
   <link href="css/dashboard.css" rel="stylesheet">
 </head>
 
@@ -32,7 +33,7 @@
   </div>
 </nav>
 
-<div class="container-fluid container-content" id="list">
+<div class="container-fluid" id="list">
   <div class="row">
     <div class="col-md-10 main">
       <div class="panel" style="border:0px;">
@@ -46,7 +47,32 @@
         </div>
       </div>
       <div class="table-responsive">
-        <student-list></student-list>
+          <table class="table table-hover" id="dataTable">
+            <thead>
+            <tr>
+              <th></th>
+              <th>编号</th>
+              <th>姓名</th>
+              <th>学号</th>
+              <th>学院</th>
+              <th>专业</th>
+              <th>班级</th>
+              <th>课程</th>
+            </tr>
+            </thead>
+            <tbody v-if="students">
+            <tr v-for="(student, index) in students">
+              <td><input type="checkbox" name="choseStu"> </td>
+              <td>{{ student.id }}</td>
+              <td>{{ student.name }}</td>
+              <td>{{ student.num }}</td>
+              <td>{{ student.academy }}</td>
+              <td>{{ student.major }}</td>
+              <td>{{ student.grade }}</td>
+              <td>{{ student.course }}</td>
+            </tr>
+            </tbody>
+          </table>
       </div>
     </div>
   </div>
@@ -61,24 +87,58 @@
         <h4 class="modal-title" id="exampleModalLabel">新增学生信息</h4>
       </div>
       <div class="modal-body">
-        <form id="addStuForm">
+        <form id="addStuForm" class="form-horizontal">
           <div class="form-group">
-            <label for="id" class="control-label">编号:</label>
-            <input type="text" class="form-control" id="id" name="id">
+            <label for="id" class="col-sm-2 control-label">编号:</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" v-model="id" id="id" name="id">
+              </div>
           </div>
           <div class="form-group">
-            <label for="name" class="control-label">姓名:</label>
-            <input type="text" class="form-control" id="name" name="name" />
+            <label for="name" class="col-sm-2 control-label">姓名:</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" v-model="name" id="name" name="name" />
+            </div>
           </div>
           <div class="form-group">
-            <label for="name" class="control-label">学号:</label>
-            <input type="text" class="form-control" id="num" name="num" />
+            <label for="name" class="col-sm-2 control-label">学号:</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" v-model="num" id="num" name="num" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="academy" class="col-sm-2 control-label">学院:</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" v-model="academy" id="academy" name="academy" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="major" class="col-sm-2 control-label">专业:</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" v-model="major" id="major" name="major" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="grade" class="col-sm-2 control-label">班级:</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" v-model="grade" id="grade" name="grade" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="course" class="col-sm-2 control-label">课程:</label>
+            <div class="col-sm-4">
+              <textarea class="form-control" id="course" v-model="course" name="course"></textarea>
+            </div>
           </div>
         </form>
+        <div class="alert alert-danger alert-dismissible hide" role="alert" id="errorAlert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Error!</strong> <span v-model="errorMsg">{{ errorMsg }}</span>.
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" v-on:click="add">确定</button>
       </div>
     </div>
   </div>
@@ -90,34 +150,9 @@
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="js/stuManage.js"></script>
 <!--学生信息模板-->
-<script type="text/x-template" id="studentListTemp">
-  <table class="table table-hover">
-    <thead>
-    <tr>
-      <th></th>
-      <th>编号</th>
-      <th>姓名</th>
-      <th>学号</th>
-      <th>学院</th>
-      <th>专业</th>
-      <th>班级</th>
-      <th>课程</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr v-for="(student, index) in students">
-      <td><input type="checkbox"> </td>
-      <td>{{ student.id }}</td>
-      <td>{{ student.name }}</td>
-      <td>{{ student.num }}</td>
-      <td>{{ student.academy }}</td>
-      <td>{{ student.major }}</td>
-      <td>{{ student.class }}</td>
-      <td>{{ student.course }}</td>
-    </tr>
-    </tbody>
-  </table>
-</script>
+<template id="studentListTemp">
+
+</template>
 
 </body>
 </html>
