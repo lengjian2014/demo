@@ -22,9 +22,9 @@
         <ul class="nav navbar-nav">
           <li><a href="#">教师资源</a></li>
           <li><a href="#">学生资源</a></li>
-          <li><a href="#">课程管理</a></li>
+          <li class="active"><a href="#">课程管理</a></li>
           <li><a href="#">教师管理</a></li>
-          <li class="active"><a href="#">学生管理</a></li>
+          <li><a href="#">学生管理</a></li>
           <li><a href="#">资源库</a></li>
           <li><a href="#">作业管理</a></li>
           <li><a href="#">发布作业</a></li>
@@ -38,49 +38,83 @@
         <div class="col-md-12">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h4>新增学生</h4>
+              <h4>添加课程</h4>
             </div>
             <div class="panel-body">
               <form class="form-horizontal">
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">学号</label>
+                  <label for="inputEmail16" class="col-sm-2 control-label">课程名</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="工号">
+                    <input type="text" class="form-control" id="inputEmail16" placeholder="课程名">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword1" class="col-sm-2 control-label">姓名</label>
+                  <label for="inputEmail17" class="col-sm-2 control-label">课程编码</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="inputPassword1" placeholder="姓名">
+                    <input type="text" class="form-control" id="inputEmail17" placeholder="课程编码">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword2" class="col-sm-2 control-label">学院</label>
+                  <label for="inputEmail18" class="col-sm-2 control-label">课程介绍</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="inputPassword2" placeholder="学院">
+                    <input type="text" class="form-control" id="inputEmail18" placeholder="课程介绍">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword4" class="col-sm-2 control-label">专业</label>
+                  <label for="inputEmail19" class="col-sm-2 control-label">课程目录</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="inputPassword4" placeholder="专业">
+                    <input type="text" class="form-control" id="inputEmail19" placeholder="课程目录">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword5" class="col-sm-2 control-label">班级</label>
+                  <label for="inputEmail12" class="col-sm-2 control-label">专业名</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="inputPassword5" placeholder="班级">
+                    <input type="text" class="form-control" id="inputEmail12" placeholder="专业名">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">课程</label>
+                  <label for="inputEmail13" class="col-sm-2 control-label">课时</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputEmail13" placeholder="课时">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail4" class="col-sm-2 control-label">上课节次</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="上课节次">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail5" class="col-sm-2 control-label">上课星期</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputEmail5" placeholder="上课星期">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword1" class="col-sm-2 control-label">上课周次</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputPassword1" placeholder="上课周次">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword14" class="col-sm-2 control-label">开始时间</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputPassword14" placeholder="开始时间">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword15" class="col-sm-2 control-label">结束时间</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputPassword15" placeholder="结束时间">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">课堂状态</label>
                   <div class="col-sm-8" id="inputPassword3">
                       <select class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option>请选择</option>
+                        <option>未开始</option>
+                        <option>已结束</option>
                       </select>
                   </div>
                 </div>

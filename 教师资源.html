@@ -9,16 +9,12 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="../../favicon.ico">
-
-  <title>Dashboard Template for Bootstrap</title>
-
-  <title>Dashboard Template for Bootstrap</title>
-  <link href="./css/bootstrap.min.css" rel="stylesheet">
-  <link href="./css/dashboard.css" rel="stylesheet">
+  <title>虚拟现实教学辅助云平台</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/dashboard.css" rel="stylesheet">
 </head>
-
 <body>
-
 <nav class="navbar navbar-inverse navbar-static-top">
   <div class="container-fluid">
     <div id="navbar" class="navbar-collapse collapse">
@@ -36,11 +32,11 @@
   </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container-fluid container-content">
   <div class="row">
     <div class="col-md-2 sidebar">
       <ul class="nav nav-sidebar">
-        <li class="active"><a href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> 全部文件</a></li>
+        <li class=""><a href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> 全部文件</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#demo">
             <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span> 机械设计
@@ -56,88 +52,115 @@
       </ul>
     </div>
     <div class="col-md-10 col-md-offset-2 main">
-
-      <div class="panel" style="border:0px;">
-        <div class="page-header">
+      <div class="panel panel-default">
+        <div class="panel-heading">
             <div class="btn-group">
-              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-upload"></span> 上传</button>
+              <a type="button" class="btn btn-heading"><span class="fa fa-cloud-upload"></span> 上传</a>
             </div><!-- /btn-group -->
             <div class="btn-group">
-              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download"></span> 下载</button>
+              <a type="button" class="btn btn-heading"><span class="fa fa-cloud-download"></span> 下载</a>
             </div><!-- /btn-group -->
             <div class="btn-group">
-              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-zoom-in"></span> 预览 </button>
+              <a type="button" class="btn btn-heading"><span class="glyphicon glyphicon-trash"></span> 删除 </a>
             </div><!-- /btn-group -->
             <div class="btn-group">
-              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span> 删除 </button>
+              <a type="button" class="btn btn-heading"><span class="glyphicon glyphicon-level-up"></span> 移动 </a>
             </div><!-- /btn-group -->
             <div class="btn-group">
-              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-level-up"></span> 移动 </button>
+              <a type="button" class="btn btn-heading"><span class="fa fa-folder-o"></span> 新建文件夹</a>
             </div><!-- /btn-group -->
             <div class="btn-group">
-              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-level-up"></span> 新建文件夹</button>
-            </div><!-- /btn-group -->
-            <div class="btn-group">
-              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-save"></span> 导入课程</button>
+              <a type="button" class="btn btn-heading"><span class="glyphicon glyphicon-save"></span> 导入课程</a>
             </div><!-- /btn-group -->
         </div>
-      </div>
-      <div class="table-responsive">
-        <table class="table table-hover">
-          <thead>
-          <tr>
-            <th><input type="checkbox"> 文件名</th>
-            <th></th>
-            <th>类型</th>
-            <th>大小</th>
-            <th>修改时间</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td><input type="checkbox"> <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span> 液压传动与气压传动</td>
-            <td><span class="glyphicon glyphicon-download"></span>　<span class="glyphicon glyphicon-level-up"></span>　<span class="glyphicon glyphicon-trash"></span></td>
-            <td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox">  </td>
-            <td><span class="glyphicon glyphicon-download"></span>　<span class="glyphicon glyphicon-level-up"></span>　<span class="glyphicon glyphicon-trash"></span></td>
-            <td>consectetur</td>
-            <td>adipiscing</td>
-            <td>elit</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox">  </td>
-            <td><span class="glyphicon glyphicon-download"></span>　<span class="glyphicon glyphicon-level-up"></span>　<span class="glyphicon glyphicon-trash"></span></td>
-            <td>nec</td>
-            <td>odio</td>
-            <td>Praesent</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox">  </td>
-            <td><span class="glyphicon glyphicon-download"></span>　<span class="glyphicon glyphicon-level-up"></span>　<span class="glyphicon glyphicon-trash"></span></td>
-            <td>Sed</td>
-            <td>cursus</td>
-            <td>ante</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox">  </td>
-            <td><span class="glyphicon glyphicon-download"></span>　<span class="glyphicon glyphicon-level-up"></span>　<span class="glyphicon glyphicon-trash"></span></td>
-            <td>diam</td>
-            <td>Sed</td>
-            <td>nisi</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox">  </td>
-            <td><span class="glyphicon glyphicon-download"></span>　<span class="glyphicon glyphicon-level-up"></span>　<span class="glyphicon glyphicon-trash"></span></td>
-            <td>quis</td>
-            <td>sem</td>
-            <td>at</td>
-          </tr>
-          </tbody>
-        </table>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+              <tr>
+                <th width="40%"><input type="checkbox"> <span style="display: inline-block;padding-left: 10px;">文件名</span></th>
+                <th width="15%"></th>
+                <th width="15%">类型</th>
+                <th width="15%">大小</th>
+                <th width="15%" style="text-align: center">修改时间</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <input type="checkbox">
+                  <span style="display: inline-block;padding-left: 10px;">
+                    <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span> 液压传动与气压传动
+                  </span>
+                </td>
+                <td>
+                  <span class="glyphicon glyphicon-zoom-in"></span>
+                  <span class="fa fa-cloud-download"></span>
+                  <span class="glyphicon glyphicon-level-up"></span>
+                  <span class="glyphicon glyphicon-trash"></span></td>
+                <td>ipsum</td>
+                <td>dolor</td>
+                <td style="text-align: center">sit</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">  </td>
+                <td>
+                  <span class="glyphicon glyphicon-zoom-in"></span>
+                  <span class="fa fa-cloud-download"></span>
+                  <span class="glyphicon glyphicon-level-up"></span>
+                  <span class="glyphicon glyphicon-trash"></span></td>
+                <td>consectetur</td>
+                <td>adipiscing</td>
+                <td style="text-align: center">elit</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">  </td>
+                <td><span class="glyphicon glyphicon-zoom-in"></span>
+                  <span class="fa fa-cloud-download"></span>
+                  <span class="glyphicon glyphicon-level-up"></span>
+                  <span class="glyphicon glyphicon-trash"></span>
+                </td>
+                <td>nec</td>
+                <td>odio</td>
+                <td style="text-align: center">Praesent</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">  </td>
+                <td><span class="glyphicon glyphicon-zoom-in"></span>
+                  <span class="fa fa-cloud-download"></span>
+                  <span class="glyphicon glyphicon-level-up"></span>
+                  <span class="glyphicon glyphicon-trash"></span>
+                </td>
+                <td>Sed</td>
+                <td>cursus</td>
+                <td style="text-align: center">ante</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">  </td>
+                <td><span class="glyphicon glyphicon-zoom-in"></span>
+                  <span class="fa fa-cloud-download"></span>
+                  <span class="glyphicon glyphicon-level-up"></span>
+                  <span class="glyphicon glyphicon-trash"></span>
+                </td>
+                <td>diam</td>
+                <td>Sed</td>
+                <td style="text-align: center">nisi</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">  </td>
+                <td><span class="glyphicon glyphicon-zoom-in"></span>
+                  <span class="fa fa-cloud-download"></span>
+                  <span class="glyphicon glyphicon-level-up"></span>
+                  <span class="glyphicon glyphicon-trash"></span>
+                </td>
+                <td>quis</td>
+                <td>sem</td>
+                <td style="text-align: center">at</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </div>
